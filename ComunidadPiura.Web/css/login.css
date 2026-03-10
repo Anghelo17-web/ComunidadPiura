@@ -1,0 +1,113 @@
+/* css/login.css — Estilos exclusivos del login/registro — Tema B&W */
+
+.auth-page { display: flex; min-height: 100vh; }
+
+/* ── PANEL IZQUIERDO ── */
+.auth-left {
+  width: 460px; min-height: 100vh; background: var(--dark1);
+  border-right: 1px solid var(--border); display: flex;
+  flex-direction: column; position: relative; overflow: hidden; flex-shrink: 0;
+}
+.al-bg { position: absolute; inset: 0; pointer-events: none; }
+.al-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.al-orb {
+  position: absolute; bottom: -100px; left: -100px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.06) 0%, transparent 65%);
+  animation: pulse 8s ease-in-out infinite;
+}
+.al-content { position: relative; z-index: 1; padding: 44px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.back-btn {
+  color: var(--w30); font-size: .68rem; letter-spacing: 3px; text-transform: uppercase;
+  margin-bottom: 52px; display: inline-flex; align-items: center; gap: 8px; transition: var(--t);
+}
+.back-btn:hover { color: var(--white); }
+.al-logo { margin-bottom: 44px; }
+.al-quote {
+  border-left: 1px solid rgba(255,255,255,0.3);
+  padding-left: 20px; margin-bottom: 44px;
+}
+.al-quote blockquote { font-family: var(--font-d); font-size: 1.3rem; color: var(--w80); line-height: 1.55; font-style: italic; }
+.al-stats { display: flex; align-items: center; }
+.als-item { text-align: center; padding: 0 20px; }
+.als-num { display: block; font-family: var(--font-d); font-size: 1.9rem; color: var(--white); line-height: 1; }
+.als-lbl { font-size: .58rem; color: var(--w30); text-transform: uppercase; letter-spacing: 3px; }
+.als-sep { width: 1px; height: 32px; background: var(--border); }
+.al-footer { position: relative; z-index: 1; padding: 18px 44px; color: var(--w30); font-size: .7rem; border-top: 1px solid var(--border); }
+
+/* ── PANEL DERECHO ── */
+.auth-right { flex: 1; overflow-y: auto; display: flex; align-items: center; justify-content: center; padding: 44px 24px; background: var(--bg); }
+.auth-box { width: 100%; max-width: 460px; }
+
+/* TABS */
+.auth-tabs { display: flex; background: var(--dark2); border: 1px solid var(--border); border-radius: 10px; padding: 4px; margin-bottom: 36px; position: relative; }
+.auth-tab {
+  flex: 1; padding: 11px; background: none; border: none; cursor: pointer;
+  color: var(--w30); font-size: .72rem; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; border-radius: 7px; position: relative; z-index: 1; transition: color var(--t);
+}
+.auth-tab.active { color: var(--bg); }
+.tab-ind { position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc(50% - 4px); background: var(--white); border-radius: 7px; transition: transform var(--t); }
+.tab-ind.right { transform: translateX(100%); }
+
+/* FORMS */
+.auth-form { animation: fadeUp .35s ease; }
+.auth-form.hidden { display: none; }
+.form-head { margin-bottom: 32px; }
+.form-head h2 { font-family: var(--font-d); font-size: 2.1rem; margin-bottom: 6px; color: var(--white); }
+.form-head p { color: var(--w30); font-size: .82rem; }
+.form-opts { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.forgot-btn { color: var(--w50); font-size: .75rem; cursor: pointer; background: none; border: none; transition: var(--t); text-decoration: underline; text-underline-offset: 3px; }
+.forgot-btn:hover { color: var(--white); }
+.divider { text-align: center; position: relative; margin: 24px 0; color: var(--w30); font-size: .68rem; letter-spacing: 2px; text-transform: uppercase; }
+.divider::before, .divider::after { content: ''; position: absolute; top: 50%; width: calc(50% - 65px); height: 1px; background: var(--border); }
+.divider::before { left: 0; } .divider::after { right: 0; }
+.soc-auth { display: flex; gap: 10px; margin-bottom: 24px; }
+.soc-auth-btn { flex: 1; padding: 12px; background: var(--dark2); border: 1px solid var(--border); border-radius: 9px; color: var(--w80); font-size: .76rem; font-weight: 600; cursor: pointer; transition: var(--t); }
+.soc-auth-btn:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
+.switch-p { text-align: center; font-size: .8rem; color: var(--w30); }
+.switch-p span { color: var(--white); cursor: pointer; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.pass-bar { height: 2px; border-radius: 2px; background: var(--border); margin-top: 7px; overflow: hidden; }
+.pass-fill { height: 100%; border-radius: 2px; transition: all .4s; }
+
+/* ── BTN PRINCIPAL B&W ── */
+.btn-submit {
+  width: 100%; padding: 15px; background: var(--white); color: var(--bg);
+  border: none; border-radius: 9px; font-family: var(--font-b); font-weight: 700;
+  font-size: .82rem; letter-spacing: 2px; text-transform: uppercase;
+  cursor: pointer; transition: var(--t); margin-bottom: 20px;
+}
+.btn-submit:hover { background: var(--w80); transform: translateY(-1px); box-shadow: 0 8px 28px rgba(255,255,255,.12); }
+
+/* ── MODAL OLVIDÉ CONTRASEÑA ── */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 9000;
+  background: rgba(0,0,0,.85); backdrop-filter: blur(8px);
+  align-items: center; justify-content: center; animation: fadeIn .25s ease;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: var(--dark2); border: 1px solid var(--border); border-radius: 16px;
+  padding: 44px; width: 100%; max-width: 420px; position: relative;
+  animation: fadeUp .3s ease;
+}
+.modal-close {
+  position: absolute; top: 16px; right: 18px; background: none; border: none;
+  color: var(--w30); font-size: 1.3rem; cursor: pointer; transition: var(--t); line-height: 1;
+}
+.modal-close:hover { color: var(--white); }
+.modal-icon { font-size: 2.5rem; margin-bottom: 18px; }
+.modal-box h3 { font-family: var(--font-d); font-size: 1.7rem; margin-bottom: 8px; }
+.modal-box p { color: var(--w50); font-size: .83rem; margin-bottom: 26px; line-height: 1.6; }
+.modal-success { display: none; text-align: center; padding: 10px 0; }
+.modal-success .ms-icon { font-size: 3rem; margin-bottom: 14px; }
+.modal-success p { color: var(--w80); font-size: .88rem; }
+
+@media (max-width: 900px) { .auth-left { display: none; } .auth-right { padding: 32px 18px; } }
+@media (max-width: 480px) { .modal-box { margin: 16px; padding: 32px 24px; } }
