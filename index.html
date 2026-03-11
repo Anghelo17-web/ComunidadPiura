@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comunidad Piura</title>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="logo-wrap">
+      <div class="sb-logo"style="position: relative; justify-content: center;">
+        <img src="../1.imagenes/logo.png" alt="Logo Comunidad Piura" style="height: 60px; width: auto;">
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#hero"      class="nav-link active">Inicio</a></li>
+      <li><a href="#nosotros"  class="nav-link">Nosotros</a></li>
+      <li><a href="#actividades" class="nav-link">Actividades</a></li>
+      <li><a href="#galeria"   class="nav-link">Galería</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="pages/login.html"             class="btn-ghost">Ingresar</a>
+      <a href="pages/login.html#registro"    class="btn-gold">Registrarse</a>
+    </div>
+    <button class="hamburger" id="hamBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mob-menu" id="mobMenu">
+    <a href="#hero"        onclick="closeMob()">Inicio</a>
+    <a href="#nosotros"    onclick="closeMob()">Nosotros</a>
+    <a href="#actividades" onclick="closeMob()">Actividades</a>
+    <a href="#galeria"     onclick="closeMob()">Galería</a>
+    <a href="pages/login.html">Ingresar</a>
+    <a href="pages/login.html#registro" class="btn-gold">Registrarse</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hgrid"></div>
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-badge">🌊 Región Piura · Perú</div>
+      <h1 class="title-xl">Somos<br/><span class="gold">Piura</span></h1>
+      <p class="hero-sub">Deportes, viajes, salidas y mucho más. Todos los distritos de la región, unidos en una sola comunidad.</p>
+      <div class="hero-cta">
+        <a href="pages/login.html#registro" class="btn-gold lg">Únete gratis</a>
+        <a href="#nosotros" class="btn-ghost">Conoce más ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div class="st-item"><span class="st-num" data-target="1200">0</span><span class="st-lbl">Miembros</span></div>
+        <div class="st-div"></div>
+        <div class="st-item"><span class="st-num" data-target="20">0</span><span class="st-lbl">Distritos</span></div>
+        <div class="st-div"></div>
+        <div class="st-item"><span class="st-num" data-target="88">0</span><span class="st-lbl">Eventos</span></div>
+        <div class="st-div"></div>
+        <div class="st-item"><span class="st-num" data-target="1">0</span><span class="st-lbl">Año</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+  </section>
+
+  <!-- ── NOSOTROS ── -->
+  <section class="about-sec" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-visual">
+          <div class="av-main">
+          <img src="imagenes/foto.jpeg" alt="Comunidad Piura" style="width:100%;height:100%;object-fit:cover;border-radius:inherit"/>
+        </div>
+          <div class="av-chip av-top">⚽ <span>Deportes</span></div>
+          <div class="av-chip av-bot">✈️ <span>Viajes</span></div>
+          <div class="av-line"></div>
+        </div>
+
+        <div class="about-text reveal">
+          <span class="tag">Quiénes somos</span>
+          <h2 class="title-lg">Bienvenido a la<br/><span class="gold">Comunidad Piura</span></h2>
+          <p>Somos una comunidad creada para <strong>unir a los piuranos</strong> de todos los distritos de la región. Organizamos torneos, excursiones, viajes grupales y celebramos nuestra cultura.</p>
+          <p>Desde Máncora hasta Ayabaca, desde Talara hasta Huancabamba — cada rincón de Piura tiene un lugar aquí.</p>
+          <ul class="feat-list">
+            <li><div class="feat-dot"></div>Organización sin fines de lucro</li>
+            <li><div class="feat-dot"></div>Eventos mensuales garantizados</li>
+            <li><div class="feat-dot"></div>Comunidad verificada y segura</li>
+          </ul>
+          <a href="pages/login.html#registro" class="btn-gold">Ser parte →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ACTIVIDADES ── -->
+  <section class="acts-sec" id="actividades">
+    <div class="container">
+      <div class="sec-head">
+        <span class="tag">Lo que hacemos</span>
+        <h2 class="title-lg">Nuestras <span class="gold">Actividades</span></h2>
+        <p class="muted">Hay algo para cada piurano en nuestra comunidad</p>
+      </div>
+      <div class="acts-grid">
+        <div class="act-card reveal"><span class="act-icon">⚽</span><h3>Deportes</h3><p>Torneos de fútbol, vóley, atletismo y más entre distritos.</p><div class="act-bar"></div></div>
+        <div class="act-card reveal"><span class="act-icon">🏕️</span><h3>Salidas</h3><p>Excursiones y trekking a los paisajes más increíbles de Piura.</p><div class="act-bar"></div></div>
+        <div class="act-card reveal"><span class="act-icon">✈️</span><h3>Viajes</h3><p>Viajes grupales con precios accesibles, dentro y fuera de la región.</p><div class="act-bar"></div></div>
+        <div class="act-card reveal"><span class="act-icon">🎉</span><h3>Festividades</h3><p>Celebramos fiestas patronales y ferias culturales de cada distrito.</p><div class="act-bar"></div></div>
+        <div class="act-card reveal"><span class="act-icon">🍽️</span><h3>Gastronomía</h3><p>Encuentros culinarios para celebrar la riquísima cocina piurana.</p><div class="act-bar"></div></div>
+        <div class="act-card reveal"><span class="act-icon">🤝</span><h3>Voluntariado</h3><p>Proyectos solidarios y apoyo a comunidades de la región.</p><div class="act-bar"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALERÍA / CARRUSEL ── -->
+  <section class="gallery-sec" id="galeria">
+    <div class="container">
+      <div class="sec-head">
+        <span class="tag">Nuestros momentos</span>
+        <h2 class="title-lg">Galería de <span class="gold">Recuerdos</span></h2>
+      </div>
+    </div>
+    <div class="carousel-wrap">
+      <div class="c-track" id="cTrack">
+        <div class="c-slide" style="background:linear-gradient(135deg,#141414,#2a2a2a)">🏔️<span>Sierra de Piura</span></div>
+        <div class="c-slide" style="background:linear-gradient(135deg,#0d1f0d,#173317)">⚽<span>Torneo Interdistrital</span></div>
+        <div class="c-slide" style="background:linear-gradient(135deg,#0d0d20,#151528)">🏖️<span>Playa Máncora</span></div>
+        <div class="c-slide" style="background:linear-gradient(135deg,#201400,#351f00)">🍽️<span>Festival Gastronómico</span></div>
+        <div class="c-slide" style="background:linear-gradient(135deg,#160d20,#231535)">✈️<span>Viaje a Cusco</span></div>
+        <div class="c-slide" style="background:linear-gradient(135deg,#200d0d,#351414)">🏕️<span>Cataratas Huancabamba</span></div>
+        <div class="c-slide" style="background:linear-gradient(135deg,#0d2015,#133322)">🤝<span>Voluntariado</span></div>
+        <div class="c-slide" style="background:linear-gradient(135deg,#1e1e00,#302e00)">🎉<span>Fiestas de Piura</span></div>
+      </div>
+      <button class="c-btn c-prev" id="cPrev">&#8592;</button>
+      <button class="c-btn c-next" id="cNext">&#8594;</button>
+      <div class="c-dots" id="cDots"></div>
+    </div>
+  </section>
+
+  <!-- ── REDES SOCIALES ── -->
+  <section class="social-sec">
+    <div class="container">
+      <div class="sec-head">
+        <span class="tag">Síguenos</span>
+        <h2 class="title-lg">Encuéntranos en <span class="gold">Redes</span></h2>
+        <p class="muted">Mantente al día con todos los eventos y noticias</p>
+      </div>
+      <div class="soc-grid">
+        <a href="#" class="soc-card reveal"><span class="soc-icon">📘</span><h3>Facebook</h3><p>Comunidad Piura Oficial</p><span class="soc-follow">2.4K seguidores</span></a>
+        <a href="#" class="soc-card reveal"><span class="soc-icon">📸</span><h3>Instagram</h3><p>@comunidad.piura</p><span class="soc-follow">1.8K seguidores</span></a>
+        <a href="#" class="soc-card reveal"><span class="soc-icon">💬</span><h3>WhatsApp</h3><p>Grupo oficial</p><span class="soc-follow">500+ miembros</span></a>
+        <a href="#" class="soc-card reveal"><span class="soc-icon">🎵</span><h3>TikTok</h3><p>@comunidadpiura</p><span class="soc-follow">900 seguidores</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <div class="logo-mark">CP</div>
+            <div class="logo-text"><span>Comunidad</span><strong>Piura</strong></div>
+          </div>
+          <p>Uniendo a todos los distritos de la región Piura desde 2020.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <a href="#hero">Inicio</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#actividades">Actividades</a>
+          <a href="#galeria">Galería</a>
+        </div>
+        <div class="footer-col">
+          <h4>Acceso</h4>
+          <a href="pages/login.html">Ingresar</a>
+          <a href="pages/login.html#registro">Registrarse</a>
+          <a href="pages/dashboard.html">Dashboard</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Comunidad Piura · Hecho con ❤️ en Piura, Perú</div>
+    </div>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
