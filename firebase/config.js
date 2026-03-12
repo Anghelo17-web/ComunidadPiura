@@ -9,12 +9,13 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-aut
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_AUTH_DOMAIN",
-  projectId: "TU_PROJECT_ID",
-  storageBucket: "TU_STORAGE_BUCKET",
-  messagingSenderId: "TU_MESSAGING_SENDER_ID",
-  appId: "TU_APP_ID"
+  apiKey: "AIzaSyD23L7s-Qf7apNAQI0RTEnJQ92pZnSpMeE",
+  authDomain: "comunidadpiura-1af5d.firebaseapp.com",
+  projectId: "comunidadpiura-1af5d",
+  storageBucket: "comunidadpiura-1af5d.firebasestorage.app",
+  messagingSenderId: "70654375387",
+  appId: "1:70654375387:web:b94f90b587ad8ab75ae3fe",
+  measurementId: "G-TND0Z325B4"
 };
 
 const app = initializeApp(firebaseConfig);
