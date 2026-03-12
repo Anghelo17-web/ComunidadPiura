@@ -9,7 +9,7 @@ import {
   collection, getDocs, serverTimestamp, query, orderBy
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-const ADMIN_EMAIL = 'piuratiktok@gmail.com';
+const ADMIN_EMAIL = 'heinner2212@gmail.com';
 let currentUser = null;
 let isAdmin     = false;
 let allEvents   = [];
